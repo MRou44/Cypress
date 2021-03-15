@@ -1,0 +1,17 @@
+{
+  "name": "TutoCypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^6.6.0",
+    "cypress-file-upload": "^5.0.2",
+    "cypress-xpath": "^1.6.2"
+  }
+}
