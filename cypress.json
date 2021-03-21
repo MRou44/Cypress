@@ -1,3 +1,10 @@
 {
-  "projectId": "hp4d7d"
+  "projectId": "hp4d7d",
+  "reporter": "C:/Users/marti/TutoCypress/node_modules/mochawesome/src/mochawesome.js",
+  "reporterOptions": {
+  	"overwrite": false,
+  	"html": false,
+  	"json": true,
+  	"timestamp": "yyyymmdd_HHMMss"
+  }
 }

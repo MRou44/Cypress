@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-18T15:39:58.293Z",
+    "end": "2021-03-18T15:40:28.908Z",
+    "duration": 30615,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6a132c78-fd30-423f-a373-24b865f04095",
+      "title": "",
+      "fullFile": "cypress\\integration\\exercice_01.js",
+      "file": "cypress\\integration\\exercice_01.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "20ee680b-f780-4207-8cb7-faa2cba59574",
+          "title": "Exercice 1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "open shop.demoqa.com in browser",
+              "fullTitle": "Exercice 1 open shop.demoqa.com in browser",
+              "timedOut": null,
+              "duration": 8131,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.screenshot();",
+              "err": {},
+              "uuid": "ff1737f2-0cf2-487c-ad27-af82f23d9292",
+              "parentUUID": "20ee680b-f780-4207-8cb7-faa2cba59574",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open shop.demoqa.com in iphone 8",
+              "fullTitle": "Exercice 1 open shop.demoqa.com in iphone 8",
+              "timedOut": null,
+              "duration": 10628,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-8');\ncy.screenshot();",
+              "err": {},
+              "uuid": "3e649ecb-1fc5-4590-a6cc-6b0a39460f30",
+              "parentUUID": "20ee680b-f780-4207-8cb7-faa2cba59574",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open shop.demoqa.com in samsung s10",
+              "fullTitle": "Exercice 1 open shop.demoqa.com in samsung s10",
+              "timedOut": null,
+              "duration": 10505,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('samsung-s10');\ncy.screenshot();",
+              "err": {},
+              "uuid": "73541e1b-351d-45d3-b525-4f1c401e075d",
+              "parentUUID": "20ee680b-f780-4207-8cb7-faa2cba59574",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ff1737f2-0cf2-487c-ad27-af82f23d9292",
+            "3e649ecb-1fc5-4590-a6cc-6b0a39460f30",
+            "73541e1b-351d-45d3-b525-4f1c401e075d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 29264,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-19T15:22:06.640Z",
+    "end": "2021-03-19T15:22:11.955Z",
+    "duration": 5315,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "26d076c3-9104-4006-bad5-405a8506623a",
+      "title": "",
+      "fullFile": "cypress\\integration\\orangeHRM\\orangeHRMComplete.js",
+      "file": "cypress\\integration\\orangeHRM\\orangeHRMComplete.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7421fc86-8dbb-42f3-bef1-31253209608c",
+          "title": "OrangeHRMComplete",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "26a037fd-8464-4ce8-9e83-30c03031db63",
+              "title": "OrangeHRM",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+                  "fullTitle": "OrangeHRMComplete OrangeHRM Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+                  "timedOut": null,
+                  "duration": 2512,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('#frmLogin').contains('LOGIN Panel');",
+                  "err": {},
+                  "uuid": "eebc75b9-8f9c-4899-895f-660cb6df1da2",
+                  "parentUUID": "26a037fd-8464-4ce8-9e83-30c03031db63",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "eebc75b9-8f9c-4899-895f-660cb6df1da2"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2512,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
