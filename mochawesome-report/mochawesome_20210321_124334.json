@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-21T11:43:27.255Z",
+    "end": "2021-03-21T11:43:34.905Z",
+    "duration": 7650,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5eea4783-9ae7-40fa-ab9e-9b222b04b688",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo_with_fixtures.js",
+      "file": "cypress\\integration\\demo_with_fixtures.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fbf7b264-c0e7-4a90-980f-02b86b7f89b4",
+          "title": "Demo automation with fixtures",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in",
+              "fullTitle": "Demo automation with fixtures Sign in",
+              "timedOut": null,
+              "duration": 5320,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://shop.demoqa.com/my-account/');\ncy.get('#reg_username').type(this.user.username);\ncy.get('#reg_email').type(this.user.email);\ncy.get('#reg_password').type(this.user.password);\ncy.get('.woocommerce-Button').click();",
+              "err": {},
+              "uuid": "942069db-c821-416f-bfa2-3ca31727d299",
+              "parentUUID": "fbf7b264-c0e7-4a90-980f-02b86b7f89b4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "942069db-c821-416f-bfa2-3ca31727d299"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5320,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

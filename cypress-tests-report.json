@@ -1,19 +1,19 @@
 {
   "stats": {
-    "suites": 10,
-    "tests": 14,
-    "passes": 11,
+    "suites": 40,
+    "tests": 56,
+    "passes": 44,
     "pending": 0,
-    "failures": 2,
+    "failures": 8,
     "start": "2021-03-18T15:39:22.382Z",
-    "end": "2021-03-18T15:41:07.638Z",
-    "duration": 61041,
-    "testsRegistered": 14,
+    "end": "2021-03-21T11:46:29.411Z",
+    "duration": 301987,
+    "testsRegistered": 56,
     "passPercent": 78.57142857142857,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 1,
+    "skipped": 4,
     "hasSkipped": true
   },
   "results": [
@@ -688,6 +688,2061 @@
           "pending": [],
           "skipped": [],
           "duration": 1287,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "dadf3be8-ff79-4907-825d-a826591187e4",
+      "title": "",
+      "fullFile": "cypress\\integration\\automationTestGherkin.js",
+      "file": "cypress\\integration\\automationTestGherkin.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "553895de-6e75-461c-be9b-75f3819cb256",
+          "title": "site toolsQA Shop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "add shirts on cart",
+              "fullTitle": "site toolsQA Shop add shirts on cart",
+              "timedOut": null,
+              "duration": 15732,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Given J'accède à la page http://shop.demoqa.com/my-account/\ncy.visit('http://shop.demoqa.com/my-account/'); //And Je m'enregistre avec le nom d'utilisateur \"user02\",\n//l'adresse mail \"user02.test@gmail.com\"\n//et le mot de passe \"user02testPW\"\ncy.get('#reg_username').type('user02');\ncy.get('#reg_email').type('user02.test@gmail.com');\ncy.get('#reg_password').type('user02testPW');\ncy.get('.woocommerce-Button').click(); //When Je recherche \"shirt\"\ncy.get('.noo-search').click();\ncy.get('.form-control').type('shirt{enter}'); //And Je sélectionne les produits avec les spécifications suivantes\n//blue denim 34 black\ncy.get('.post-1430 > .noo-product-inner > h3 > a').click();\ncy.get('#pa_color').select('black');\ncy.get('#pa_size').select('34'); //And je clique sur \"Add to cart\"\ncy.get('.single_add_to_cart_button').click(); //And Je sélectionne un autre produit\n//playboy 40 grey\ncy.get('.noo-search').click();\ncy.get('.form-control').type('shirt{enter}');\ncy.get('.post-1491 > .noo-product-inner > h3 > a').click();\ncy.get('#pa_color').select('grey');\ncy.get('#pa_size').select('40'); //And je clique sur \"Add to cart\"\ncy.get('.single_add_to_cart_button').click(); //Then La page du panier contient \"blue denim\" et \"playboy\"\ncy.get('.woocommerce-message > .button').click();\ncy.get('.woocommerce > form').should('contain', 'blue denim');\ncy.get('.woocommerce > form').should('contain', 'playboy');",
+              "err": {},
+              "uuid": "0c69afff-3675-48a9-9ef6-076b9ed2028a",
+              "parentUUID": "553895de-6e75-461c-be9b-75f3819cb256",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0c69afff-3675-48a9-9ef6-076b9ed2028a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15732,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "cb5bfdb0-706a-4394-a7e2-9ba97dacb6f6",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo_file_upload.js",
+      "file": "cypress\\integration\\demo_file_upload.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fc6297d0-6672-43ef-81e9-78239440167c",
+          "title": "Example to demonstrate file upload in cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Upload a photography and verify if uploaded",
+              "fullTitle": "Example to demonstrate file upload in cypress Upload a photography and verify if uploaded",
+              "timedOut": null,
+              "duration": 2108,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var filepath = 'images/myPhotography.jpg';\ncy.get('#uploadFile').attachFile(filepath);\ncy.get('#uploadedFilePath').contains('myPhotography.jpg');",
+              "err": {},
+              "uuid": "f8081e90-615b-4dc2-9024-3c0fa5e093dd",
+              "parentUUID": "fc6297d0-6672-43ef-81e9-78239440167c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f8081e90-615b-4dc2-9024-3c0fa5e093dd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2108,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f4ed4a78-b7c6-46c4-806e-0b13b4ebcdae",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo_with_fixtures.js",
+      "file": "cypress\\integration\\demo_with_fixtures.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6eb19639-4d82-47f0-be05-2c19ff789309",
+          "title": "Demo automation with fixtures",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in",
+              "fullTitle": "Demo automation with fixtures Sign in",
+              "timedOut": null,
+              "duration": 4271,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://shop.demoqa.com/my-account/');\ncy.get('#reg_username').type(this.user.username);\ncy.get('#reg_email').type(this.user.email);\ncy.get('#reg_password').type(this.user.password);\ncy.get('.woocommerce-Button').click();",
+              "err": {},
+              "uuid": "ae5b664a-af9d-4e54-bb8a-8fe6eab19b6d",
+              "parentUUID": "6eb19639-4d82-47f0-be05-2c19ff789309",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ae5b664a-af9d-4e54-bb8a-8fe6eab19b6d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4271,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "66f09b13-66d9-4173-8361-57e4e89f944e",
+      "title": "",
+      "fullFile": "cypress\\integration\\exercice_01.js",
+      "file": "cypress\\integration\\exercice_01.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "53047874-0ba4-4088-9a58-3c89966dfe65",
+          "title": "Exercice 1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "open shop.demoqa.com in browser",
+              "fullTitle": "Exercice 1 open shop.demoqa.com in browser",
+              "timedOut": null,
+              "duration": 9775,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.screenshot();",
+              "err": {},
+              "uuid": "07ed6572-1b77-4d04-90af-f39c76faacf3",
+              "parentUUID": "53047874-0ba4-4088-9a58-3c89966dfe65",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open shop.demoqa.com in iphone 8",
+              "fullTitle": "Exercice 1 open shop.demoqa.com in iphone 8",
+              "timedOut": null,
+              "duration": 13407,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-8');\ncy.screenshot();",
+              "err": {},
+              "uuid": "8e3ca2d5-81e4-4348-bf98-6e8b82908dbd",
+              "parentUUID": "53047874-0ba4-4088-9a58-3c89966dfe65",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open shop.demoqa.com in samsung s10",
+              "fullTitle": "Exercice 1 open shop.demoqa.com in samsung s10",
+              "timedOut": null,
+              "duration": 13465,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('samsung-s10');\ncy.screenshot();",
+              "err": {},
+              "uuid": "3c4d16d5-3dcd-4cb2-977f-3d32eab39ba0",
+              "parentUUID": "53047874-0ba4-4088-9a58-3c89966dfe65",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "07ed6572-1b77-4d04-90af-f39c76faacf3",
+            "8e3ca2d5-81e4-4348-bf98-6e8b82908dbd",
+            "3c4d16d5-3dcd-4cb2-977f-3d32eab39ba0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36647,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "6f4b6ce5-81d3-41a3-9a61-b39a8cb3cf46",
+      "title": "",
+      "fullFile": "cypress\\integration\\form.js",
+      "file": "cypress\\integration\\form.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bc67dabb-b6eb-4b3f-82a5-d7165d7afd61",
+          "title": "Submit a form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "fills out and submit a form and verify data",
+              "fullTitle": "Submit a form fills out and submit a form and verify data",
+              "timedOut": null,
+              "duration": 2629,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demoqa.com/automation-practice-form');\ncy.get('#dateOfBirthInput').click();\ncy.get('.react-datepicker__month-select').select('June');\ncy.get('.react-datepicker__year-select').select('1973');",
+              "err": {},
+              "uuid": "430998ad-a158-4dc2-b151-e331f9632c86",
+              "parentUUID": "bc67dabb-b6eb-4b3f-82a5-d7165d7afd61",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "430998ad-a158-4dc2-b151-e331f9632c86"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2629,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c757341a-4ce2-479e-a46d-fafa4e88af22",
+      "title": "",
+      "fullFile": "cypress\\integration\\home_page_spec.js",
+      "file": "cypress\\integration\\home_page_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9c698319-cc32-4768-a1f7-b627c0a757cf",
+          "title": "My Home Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "successfully loads",
+              "fullTitle": "My Home Page successfully loads",
+              "timedOut": null,
+              "duration": 458,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\n/\n\nWe failed looking for this file at the path:\n\n/Users/marti/TutoCypress/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\n/\n\nWe failed looking for this file at the path:\n\n/Users/marti/TutoCypress/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at http://localhost:55747/__cypress/runner/cypress_runner.js:159060:25\n    at visitFailedByErr (http://localhost:55747/__cypress/runner/cypress_runner.js:158436:12)\n    at http://localhost:55747/__cypress/runner/cypress_runner.js:159040:13\n    at tryCatcher (http://localhost:55747/__cypress/runner/cypress_runner.js:10765:23)\n    at Promise._settlePromiseFromHandler (http://localhost:55747/__cypress/runner/cypress_runner.js:8700:31)\n    at Promise._settlePromise (http://localhost:55747/__cypress/runner/cypress_runner.js:8757:18)\n    at Promise._settlePromise0 (http://localhost:55747/__cypress/runner/cypress_runner.js:8802:10)\n    at Promise._settlePromises (http://localhost:55747/__cypress/runner/cypress_runner.js:8878:18)\n    at _drainQueueStep (http://localhost:55747/__cypress/runner/cypress_runner.js:5472:12)\n    at _drainQueue (http://localhost:55747/__cypress/runner/cypress_runner.js:5465:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:55747/__cypress/runner/cypress_runner.js:5481:5)\n    at Async.drainQueues (http://localhost:55747/__cypress/runner/cypress_runner.js:5351:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:55747/__cypress/tests?p=cypress\\integration\\home_page_spec.js:101:8)",
+                "diff": null
+              },
+              "uuid": "2948a4bd-1860-483b-b375-ed6127494dca",
+              "parentUUID": "9c698319-cc32-4768-a1f7-b627c0a757cf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2948a4bd-1860-483b-b375-ed6127494dca"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 458,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "44008881-7ee3-4520-bde0-344a0e11b233",
+      "title": "",
+      "fullFile": "cypress\\integration\\my SecondTest.js",
+      "file": "cypress\\integration\\my SecondTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b046c59c-b7f2-4427-9970-c953c659a442",
+          "title": "Actions on elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "finds the element \"type\"",
+              "fullTitle": "Actions on elements finds the element \"type\"",
+              "timedOut": null,
+              "duration": 2477,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://example.cypress.io/');\ncy.contains('type').click(); // Should be on a new URL which includes \"/commands/actions\"\ncy.url().should('include', '/commands/actions'); // Get an input, type into it and verify that the value has been updated\ncy.get('#email1').type('test@email.com').should('have.value', 'test@email.com');",
+              "err": {},
+              "uuid": "a6ea83d4-a69a-49c6-b1ef-8ab2363f36ec",
+              "parentUUID": "b046c59c-b7f2-4427-9970-c953c659a442",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a6ea83d4-a69a-49c6-b1ef-8ab2363f36ec"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2477,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "700f59ce-66ad-4ca0-94f3-ba15bbaa6bc1",
+      "title": "",
+      "fullFile": "cypress\\integration\\myFirstTest.js",
+      "file": "cypress\\integration\\myFirstTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "15c94e4d-0ec9-4810-9d80-fc385c8795c4",
+          "title": "Site cypress.io",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "open in browser",
+              "fullTitle": "Site cypress.io open in browser",
+              "timedOut": null,
+              "duration": 9493,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.screenshot();",
+              "err": {},
+              "uuid": "b8f3e6bb-71b1-466e-be30-80c84930261b",
+              "parentUUID": "15c94e4d-0ec9-4810-9d80-fc385c8795c4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in iphone 8",
+              "fullTitle": "Site cypress.io open in iphone 8",
+              "timedOut": null,
+              "duration": 509,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-8');\ncy.screenshot();",
+              "err": {
+                "message": "NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.",
+                "estack": "NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Site cypress.io`\n\nhttps://on.cypress.io/uncaught-exception-from-application\nNetworkError: The following error originated from your application code, not from Cypress.\n\n  > Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\nError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.\n    at Function.vt.ajax (https://cdn.cookielaw.org/scripttemplates/5.13.0/otBannerSdk.js:7:63023)\n    at ee.createConsentTransaction (https://cdn.cookielaw.org/scripttemplates/5.13.0/otBannerSdk.js:7:90689)\n    at pe.consentDefaulCall (https://cdn.cookielaw.org/scripttemplates/5.13.0/otBannerSdk.js:7:115701)\n    at r (https://www.cypress.io/25-3932ff67534ed0705545.js:1:30471)",
+                "diff": null
+              },
+              "uuid": "0cdd181b-00e9-419a-b293-9dcb641b4559",
+              "parentUUID": "15c94e4d-0ec9-4810-9d80-fc385c8795c4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in samsung s10",
+              "fullTitle": "Site cypress.io open in samsung s10",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('samsung-s10');\ncy.screenshot();",
+              "err": {},
+              "uuid": "9483abea-ea67-4284-8cac-0d92f02ff7d8",
+              "parentUUID": "15c94e4d-0ec9-4810-9d80-fc385c8795c4",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b8f3e6bb-71b1-466e-be30-80c84930261b"
+          ],
+          "failures": [
+            "0cdd181b-00e9-419a-b293-9dcb641b4559"
+          ],
+          "pending": [],
+          "skipped": [
+            "9483abea-ea67-4284-8cac-0d92f02ff7d8"
+          ],
+          "duration": 10002,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "26d076c3-9104-4006-bad5-405a8506623a",
+      "title": "",
+      "fullFile": "cypress\\integration\\orangeHRM\\orangeHRMComplete.js",
+      "file": "cypress\\integration\\orangeHRM\\orangeHRMComplete.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7421fc86-8dbb-42f3-bef1-31253209608c",
+          "title": "OrangeHRMComplete",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "26a037fd-8464-4ce8-9e83-30c03031db63",
+              "title": "OrangeHRM",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+                  "fullTitle": "OrangeHRMComplete OrangeHRM Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+                  "timedOut": null,
+                  "duration": 2512,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('#frmLogin').contains('LOGIN Panel');",
+                  "err": {},
+                  "uuid": "eebc75b9-8f9c-4899-895f-660cb6df1da2",
+                  "parentUUID": "26a037fd-8464-4ce8-9e83-30c03031db63",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "eebc75b9-8f9c-4899-895f-660cb6df1da2"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2512,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "2ebcb8d4-11d7-489a-a443-41a81a9a1469",
+      "title": "",
+      "fullFile": "cypress\\integration\\orangeHRM\\orangeHRMLogin.js",
+      "file": "cypress\\integration\\orangeHRM\\orangeHRMLogin.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fd0df6ae-f6f0-4bc4-89c5-dca3369deca8",
+          "title": "OrangeHRMLogin",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+              "fullTitle": "OrangeHRMLogin Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+              "timedOut": null,
+              "duration": 3068,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/');\ncy.get('#frmLogin').contains('LOGIN');",
+              "err": {},
+              "uuid": "4770b90b-3b78-4f7b-bf7b-a9f006744612",
+              "parentUUID": "fd0df6ae-f6f0-4bc4-89c5-dca3369deca8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4770b90b-3b78-4f7b-bf7b-a9f006744612"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3068,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "89586038-a64c-4b87-8100-e535e91f9f2c",
+      "title": "",
+      "fullFile": "cypress\\integration\\automationTestGherkin.js",
+      "file": "cypress\\integration\\automationTestGherkin.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d10d3e45-5aa0-4f2f-ae33-7dbb26689f0a",
+          "title": "site toolsQA Shop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "add shirts on cart",
+              "fullTitle": "site toolsQA Shop add shirts on cart",
+              "timedOut": null,
+              "duration": 17608,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Given J'accède à la page http://shop.demoqa.com/my-account/\ncy.visit('http://shop.demoqa.com/my-account/'); //And Je m'enregistre avec le nom d'utilisateur \"user02\",\n//l'adresse mail \"user02.test@gmail.com\"\n//et le mot de passe \"user02testPW\"\ncy.get('#reg_username').type('user02');\ncy.get('#reg_email').type('user02.test@gmail.com');\ncy.get('#reg_password').type('user02testPW');\ncy.get('.woocommerce-Button').click(); //When Je recherche \"shirt\"\ncy.get('.noo-search').click();\ncy.get('.form-control').type('shirt{enter}'); //And Je sélectionne les produits avec les spécifications suivantes\n//blue denim 34 black\ncy.get('.post-1430 > .noo-product-inner > h3 > a').click();\ncy.get('#pa_color').select('black');\ncy.get('#pa_size').select('34'); //And je clique sur \"Add to cart\"\ncy.get('.single_add_to_cart_button').click(); //And Je sélectionne un autre produit\n//playboy 40 grey\ncy.get('.noo-search').click();\ncy.get('.form-control').type('shirt{enter}');\ncy.get('.post-1491 > .noo-product-inner > h3 > a').click();\ncy.get('#pa_color').select('grey');\ncy.get('#pa_size').select('40'); //And je clique sur \"Add to cart\"\ncy.get('.single_add_to_cart_button').click(); //Then La page du panier contient \"blue denim\" et \"playboy\"\ncy.get('.woocommerce-message > .button').click();\ncy.get('.woocommerce > form').should('contain', 'blue denim');\ncy.get('.woocommerce > form').should('contain', 'playboy');",
+              "err": {},
+              "uuid": "a1907822-0f34-4807-ac96-4a479d705c89",
+              "parentUUID": "d10d3e45-5aa0-4f2f-ae33-7dbb26689f0a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a1907822-0f34-4807-ac96-4a479d705c89"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17608,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0bf7b849-a50d-4524-bffd-a512d595de37",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo_file_upload.js",
+      "file": "cypress\\integration\\demo_file_upload.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aea716a0-94bd-483e-a3b0-23c0c4086d0b",
+          "title": "Example to demonstrate file upload in cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Upload a photography and verify if uploaded",
+              "fullTitle": "Example to demonstrate file upload in cypress Upload a photography and verify if uploaded",
+              "timedOut": null,
+              "duration": 2685,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var filepath = 'images/myPhotography.jpg';\ncy.get('#uploadFile').attachFile(filepath);\ncy.get('#uploadedFilePath').contains('myPhotography.jpg');",
+              "err": {},
+              "uuid": "ba425523-e293-438c-9247-4d53f555b2e5",
+              "parentUUID": "aea716a0-94bd-483e-a3b0-23c0c4086d0b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ba425523-e293-438c-9247-4d53f555b2e5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2685,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "46dbd3e3-5153-4359-85c5-132a0f68d824",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo_with_fixtures.js",
+      "file": "cypress\\integration\\demo_with_fixtures.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "881c51ed-b0e0-4aac-a565-6cccd337ba3e",
+          "title": "Demo automation with fixtures",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in",
+              "fullTitle": "Demo automation with fixtures Sign in",
+              "timedOut": null,
+              "duration": 6222,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://shop.demoqa.com/my-account/');\ncy.get('#reg_username').type(this.user.username);\ncy.get('#reg_email').type(this.user.email);\ncy.get('#reg_password').type(this.user.password);\ncy.get('.woocommerce-Button').click();",
+              "err": {},
+              "uuid": "20e76a89-e062-4b4f-bb5c-f42a58c12491",
+              "parentUUID": "881c51ed-b0e0-4aac-a565-6cccd337ba3e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "20e76a89-e062-4b4f-bb5c-f42a58c12491"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6222,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "5b8f42fe-8d80-4907-9576-ce63b1ad4a57",
+      "title": "",
+      "fullFile": "cypress\\integration\\exercice_01.js",
+      "file": "cypress\\integration\\exercice_01.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3fcce6de-a9f9-4689-81f8-3faeebf133b5",
+          "title": "Exercice 1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "open shop.demoqa.com in browser",
+              "fullTitle": "Exercice 1 open shop.demoqa.com in browser",
+              "timedOut": null,
+              "duration": 14351,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.screenshot();",
+              "err": {},
+              "uuid": "aae8da6b-c9c6-4eca-8cfe-94ef43baa47f",
+              "parentUUID": "3fcce6de-a9f9-4689-81f8-3faeebf133b5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open shop.demoqa.com in iphone 8",
+              "fullTitle": "Exercice 1 open shop.demoqa.com in iphone 8",
+              "timedOut": null,
+              "duration": 15483,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-8');\ncy.screenshot();",
+              "err": {},
+              "uuid": "68442479-a8a3-46ea-9536-e6d497315f1d",
+              "parentUUID": "3fcce6de-a9f9-4689-81f8-3faeebf133b5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open shop.demoqa.com in samsung s10",
+              "fullTitle": "Exercice 1 open shop.demoqa.com in samsung s10",
+              "timedOut": null,
+              "duration": 13287,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('samsung-s10');\ncy.screenshot();",
+              "err": {},
+              "uuid": "1aa6665b-7e31-40c8-bb6a-a0de7728ba9b",
+              "parentUUID": "3fcce6de-a9f9-4689-81f8-3faeebf133b5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aae8da6b-c9c6-4eca-8cfe-94ef43baa47f",
+            "68442479-a8a3-46ea-9536-e6d497315f1d",
+            "1aa6665b-7e31-40c8-bb6a-a0de7728ba9b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 43121,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "23f53a2b-f765-4e8e-aa8b-4d0ff4800d5c",
+      "title": "",
+      "fullFile": "cypress\\integration\\form.js",
+      "file": "cypress\\integration\\form.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dcdb99a5-d7a8-4244-a757-f539c7e19e62",
+          "title": "Submit a form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "fills out and submit a form and verify data",
+              "fullTitle": "Submit a form fills out and submit a form and verify data",
+              "timedOut": null,
+              "duration": 2712,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demoqa.com/automation-practice-form');\ncy.get('#dateOfBirthInput').click();\ncy.get('.react-datepicker__month-select').select('June');\ncy.get('.react-datepicker__year-select').select('1973');",
+              "err": {},
+              "uuid": "60b0c89f-946c-4cad-8ae8-df596e22ea58",
+              "parentUUID": "dcdb99a5-d7a8-4244-a757-f539c7e19e62",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "60b0c89f-946c-4cad-8ae8-df596e22ea58"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2712,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "6e45e9ed-5aea-4288-beb7-3beea67f6d24",
+      "title": "",
+      "fullFile": "cypress\\integration\\home_page_spec.js",
+      "file": "cypress\\integration\\home_page_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9741bec5-5901-4632-b1c5-dfc8fe90ca2e",
+          "title": "My Home Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "successfully loads",
+              "fullTitle": "My Home Page successfully loads",
+              "timedOut": null,
+              "duration": 538,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\n/\n\nWe failed looking for this file at the path:\n\n/Users/marti/TutoCypress/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\n/\n\nWe failed looking for this file at the path:\n\n/Users/marti/TutoCypress/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at http://localhost:56763/__cypress/runner/cypress_runner.js:159060:25\n    at visitFailedByErr (http://localhost:56763/__cypress/runner/cypress_runner.js:158436:12)\n    at http://localhost:56763/__cypress/runner/cypress_runner.js:159040:13\n    at tryCatcher (http://localhost:56763/__cypress/runner/cypress_runner.js:10765:23)\n    at Promise._settlePromiseFromHandler (http://localhost:56763/__cypress/runner/cypress_runner.js:8700:31)\n    at Promise._settlePromise (http://localhost:56763/__cypress/runner/cypress_runner.js:8757:18)\n    at Promise._settlePromise0 (http://localhost:56763/__cypress/runner/cypress_runner.js:8802:10)\n    at Promise._settlePromises (http://localhost:56763/__cypress/runner/cypress_runner.js:8878:18)\n    at _drainQueueStep (http://localhost:56763/__cypress/runner/cypress_runner.js:5472:12)\n    at _drainQueue (http://localhost:56763/__cypress/runner/cypress_runner.js:5465:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:56763/__cypress/runner/cypress_runner.js:5481:5)\n    at Async.drainQueues (http://localhost:56763/__cypress/runner/cypress_runner.js:5351:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:56763/__cypress/tests?p=cypress\\integration\\home_page_spec.js:101:8)",
+                "diff": null
+              },
+              "uuid": "3a9c9379-1ddf-4e2e-939c-c2a0b645e442",
+              "parentUUID": "9741bec5-5901-4632-b1c5-dfc8fe90ca2e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3a9c9379-1ddf-4e2e-939c-c2a0b645e442"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 538,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "339ab980-2a90-49dc-8443-7c7ac2df45ea",
+      "title": "",
+      "fullFile": "cypress\\integration\\my SecondTest.js",
+      "file": "cypress\\integration\\my SecondTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ee8ad057-dd72-424b-96ec-ffc5601d3589",
+          "title": "Actions on elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "finds the element \"type\"",
+              "fullTitle": "Actions on elements finds the element \"type\"",
+              "timedOut": null,
+              "duration": 2791,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://example.cypress.io/');\ncy.contains('type').click(); // Should be on a new URL which includes \"/commands/actions\"\ncy.url().should('include', '/commands/actions'); // Get an input, type into it and verify that the value has been updated\ncy.get('#email1').type('test@email.com').should('have.value', 'test@email.com');",
+              "err": {},
+              "uuid": "ca6366bb-2dac-4334-824a-6a24c9d0e0cd",
+              "parentUUID": "ee8ad057-dd72-424b-96ec-ffc5601d3589",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ca6366bb-2dac-4334-824a-6a24c9d0e0cd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2791,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4dca5683-5a1e-49c4-a2f9-3ae3d5bd4539",
+      "title": "",
+      "fullFile": "cypress\\integration\\myFirstTest.js",
+      "file": "cypress\\integration\\myFirstTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "67d82ace-ecc3-4024-bc8b-8e1fdd2807be",
+          "title": "Site cypress.io",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "open in browser",
+              "fullTitle": "Site cypress.io open in browser",
+              "timedOut": null,
+              "duration": 10887,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.screenshot();",
+              "err": {},
+              "uuid": "f2ca47ea-8297-41a1-a6aa-9cf297030904",
+              "parentUUID": "67d82ace-ecc3-4024-bc8b-8e1fdd2807be",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in iphone 8",
+              "fullTitle": "Site cypress.io open in iphone 8",
+              "timedOut": null,
+              "duration": 492,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-8');\ncy.screenshot();",
+              "err": {
+                "message": "NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.",
+                "estack": "NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Site cypress.io`\n\nhttps://on.cypress.io/uncaught-exception-from-application\nNetworkError: The following error originated from your application code, not from Cypress.\n\n  > Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\nError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.\n    at Function.vt.ajax (https://cdn.cookielaw.org/scripttemplates/5.13.0/otBannerSdk.js:7:63023)\n    at ee.createConsentTransaction (https://cdn.cookielaw.org/scripttemplates/5.13.0/otBannerSdk.js:7:90689)\n    at pe.consentDefaulCall (https://cdn.cookielaw.org/scripttemplates/5.13.0/otBannerSdk.js:7:115701)\n    at r (https://www.cypress.io/25-3932ff67534ed0705545.js:1:30471)",
+                "diff": null
+              },
+              "uuid": "4f99c905-b278-4801-88f3-f496620dec15",
+              "parentUUID": "67d82ace-ecc3-4024-bc8b-8e1fdd2807be",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in samsung s10",
+              "fullTitle": "Site cypress.io open in samsung s10",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('samsung-s10');\ncy.screenshot();",
+              "err": {},
+              "uuid": "32f832b1-6b22-4dc4-aeb4-239c3f4203f9",
+              "parentUUID": "67d82ace-ecc3-4024-bc8b-8e1fdd2807be",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f2ca47ea-8297-41a1-a6aa-9cf297030904"
+          ],
+          "failures": [
+            "4f99c905-b278-4801-88f3-f496620dec15"
+          ],
+          "pending": [],
+          "skipped": [
+            "32f832b1-6b22-4dc4-aeb4-239c3f4203f9"
+          ],
+          "duration": 11379,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "eb751b7d-ec82-43bd-b955-2535ae266841",
+      "title": "",
+      "fullFile": "cypress\\integration\\orangeHRM\\orangeHRMComplete.js",
+      "file": "cypress\\integration\\orangeHRM\\orangeHRMComplete.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1051345a-43e3-4ceb-b6f7-73c965488759",
+          "title": "OrangeHRMComplete",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "e93e2a87-7690-4b71-a70e-a9412cf77b6f",
+              "title": "OrangeHRM",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+                  "fullTitle": "OrangeHRMComplete OrangeHRM Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+                  "timedOut": null,
+                  "duration": 3076,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('#frmLogin').contains('LOGIN Panel');",
+                  "err": {},
+                  "uuid": "f13ee793-e671-4327-bb4c-d74a0f494015",
+                  "parentUUID": "e93e2a87-7690-4b71-a70e-a9412cf77b6f",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "f13ee793-e671-4327-bb4c-d74a0f494015"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3076,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e9fc4722-5fc2-4945-aadd-943653d18e4f",
+      "title": "",
+      "fullFile": "cypress\\integration\\orangeHRM\\orangeHRMLogin.js",
+      "file": "cypress\\integration\\orangeHRM\\orangeHRMLogin.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1fdb51f3-4ae7-41c5-b0a3-aedf15063618",
+          "title": "OrangeHRMLogin",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+              "fullTitle": "OrangeHRMLogin Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+              "timedOut": null,
+              "duration": 2747,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/');\ncy.get('#frmLogin').contains('LOGIN');",
+              "err": {},
+              "uuid": "05e7a741-544d-4280-bf6c-ebec474b5d78",
+              "parentUUID": "1fdb51f3-4ae7-41c5-b0a3-aedf15063618",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "05e7a741-544d-4280-bf6c-ebec474b5d78"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2747,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "721c33ce-8f0c-432e-8caa-289901da1b4f",
+      "title": "",
+      "fullFile": "cypress\\integration\\automationTestGherkin.js",
+      "file": "cypress\\integration\\automationTestGherkin.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "691bef57-4c65-4727-9556-a5090098b48d",
+          "title": "site toolsQA Shop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "add shirts on cart",
+              "fullTitle": "site toolsQA Shop add shirts on cart",
+              "timedOut": null,
+              "duration": 13759,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Given J'accède à la page http://shop.demoqa.com/my-account/\ncy.visit('http://shop.demoqa.com/my-account/'); //And Je m'enregistre avec le nom d'utilisateur \"user02\",\n//l'adresse mail \"user02.test@gmail.com\"\n//et le mot de passe \"user02testPW\"\ncy.get('#reg_username').type('user02');\ncy.get('#reg_email').type('user02.test@gmail.com');\ncy.get('#reg_password').type('user02testPW');\ncy.get('.woocommerce-Button').click(); //When Je recherche \"shirt\"\ncy.get('.noo-search').click();\ncy.get('.form-control').type('shirt{enter}'); //And Je sélectionne les produits avec les spécifications suivantes\n//blue denim 34 black\ncy.get('.post-1430 > .noo-product-inner > h3 > a').click();\ncy.get('#pa_color').select('black');\ncy.get('#pa_size').select('34'); //And je clique sur \"Add to cart\"\ncy.get('.single_add_to_cart_button').click(); //And Je sélectionne un autre produit\n//playboy 40 grey\ncy.get('.noo-search').click();\ncy.get('.form-control').type('shirt{enter}');\ncy.get('.post-1491 > .noo-product-inner > h3 > a').click();\ncy.get('#pa_color').select('grey');\ncy.get('#pa_size').select('40'); //And je clique sur \"Add to cart\"\ncy.get('.single_add_to_cart_button').click(); //Then La page du panier contient \"blue denim\" et \"playboy\"\ncy.get('.woocommerce-message > .button').click();\ncy.get('.woocommerce > form').should('contain', 'blue denim');\ncy.get('.woocommerce > form').should('contain', 'playboy');",
+              "err": {},
+              "uuid": "6c14f6ec-1c8a-4801-8b12-13badb2a2c27",
+              "parentUUID": "691bef57-4c65-4727-9556-a5090098b48d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6c14f6ec-1c8a-4801-8b12-13badb2a2c27"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13759,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "24eb6924-d7b3-45b6-a3f6-f3cec905a57d",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo_file_upload.js",
+      "file": "cypress\\integration\\demo_file_upload.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d0f7f983-bee7-4ca6-91ea-37c984eeae96",
+          "title": "Example to demonstrate file upload in cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Upload a photography and verify if uploaded",
+              "fullTitle": "Example to demonstrate file upload in cypress Upload a photography and verify if uploaded",
+              "timedOut": null,
+              "duration": 2267,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var filepath = 'images/myPhotography.jpg';\ncy.get('#uploadFile').attachFile(filepath);\ncy.get('#uploadedFilePath').contains('myPhotography.jpg');",
+              "err": {},
+              "uuid": "24fb6591-84e7-4127-995e-20d8a19b80d3",
+              "parentUUID": "d0f7f983-bee7-4ca6-91ea-37c984eeae96",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "24fb6591-84e7-4127-995e-20d8a19b80d3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2267,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "5eea4783-9ae7-40fa-ab9e-9b222b04b688",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo_with_fixtures.js",
+      "file": "cypress\\integration\\demo_with_fixtures.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fbf7b264-c0e7-4a90-980f-02b86b7f89b4",
+          "title": "Demo automation with fixtures",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in",
+              "fullTitle": "Demo automation with fixtures Sign in",
+              "timedOut": null,
+              "duration": 5320,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://shop.demoqa.com/my-account/');\ncy.get('#reg_username').type(this.user.username);\ncy.get('#reg_email').type(this.user.email);\ncy.get('#reg_password').type(this.user.password);\ncy.get('.woocommerce-Button').click();",
+              "err": {},
+              "uuid": "942069db-c821-416f-bfa2-3ca31727d299",
+              "parentUUID": "fbf7b264-c0e7-4a90-980f-02b86b7f89b4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "942069db-c821-416f-bfa2-3ca31727d299"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5320,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "669cd427-0b5a-4604-bfff-7019830b9fb0",
+      "title": "",
+      "fullFile": "cypress\\integration\\exercice_01.js",
+      "file": "cypress\\integration\\exercice_01.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f82b51a1-0db0-4af2-b512-abb98126e8cf",
+          "title": "Exercice 1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "open shop.demoqa.com in browser",
+              "fullTitle": "Exercice 1 open shop.demoqa.com in browser",
+              "timedOut": null,
+              "duration": 9800,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.screenshot();",
+              "err": {},
+              "uuid": "bccb2817-9d57-4acf-a03e-35eb58bae492",
+              "parentUUID": "f82b51a1-0db0-4af2-b512-abb98126e8cf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open shop.demoqa.com in iphone 8",
+              "fullTitle": "Exercice 1 open shop.demoqa.com in iphone 8",
+              "timedOut": null,
+              "duration": 10320,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-8');\ncy.screenshot();",
+              "err": {},
+              "uuid": "f4ba887f-9f7c-4103-821e-386eaa280afc",
+              "parentUUID": "f82b51a1-0db0-4af2-b512-abb98126e8cf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open shop.demoqa.com in samsung s10",
+              "fullTitle": "Exercice 1 open shop.demoqa.com in samsung s10",
+              "timedOut": null,
+              "duration": 10165,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('samsung-s10');\ncy.screenshot();",
+              "err": {},
+              "uuid": "6db13031-de39-4c5e-af3b-8be75701263a",
+              "parentUUID": "f82b51a1-0db0-4af2-b512-abb98126e8cf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bccb2817-9d57-4acf-a03e-35eb58bae492",
+            "f4ba887f-9f7c-4103-821e-386eaa280afc",
+            "6db13031-de39-4c5e-af3b-8be75701263a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30285,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "a712cb7f-7588-442f-86a6-07eae56d150d",
+      "title": "",
+      "fullFile": "cypress\\integration\\form.js",
+      "file": "cypress\\integration\\form.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8faf405c-e9a3-4ee0-a229-ca39c6a1c403",
+          "title": "Submit a form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "fills out and submit a form and verify data",
+              "fullTitle": "Submit a form fills out and submit a form and verify data",
+              "timedOut": null,
+              "duration": 1966,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demoqa.com/automation-practice-form');\ncy.get('#dateOfBirthInput').click();\ncy.get('.react-datepicker__month-select').select('June');\ncy.get('.react-datepicker__year-select').select('1973');",
+              "err": {},
+              "uuid": "513d183f-b723-418a-89db-32bfe1da688a",
+              "parentUUID": "8faf405c-e9a3-4ee0-a229-ca39c6a1c403",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "513d183f-b723-418a-89db-32bfe1da688a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1966,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bf7dff47-ae83-4047-b36b-7b96b1ffc4d3",
+      "title": "",
+      "fullFile": "cypress\\integration\\home_page_spec.js",
+      "file": "cypress\\integration\\home_page_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e61b8c72-e168-4ddc-9a12-58e2dd69468f",
+          "title": "My Home Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "successfully loads",
+              "fullTitle": "My Home Page successfully loads",
+              "timedOut": null,
+              "duration": 385,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\n/\n\nWe failed looking for this file at the path:\n\n/Users/marti/TutoCypress/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\n/\n\nWe failed looking for this file at the path:\n\n/Users/marti/TutoCypress/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at http://localhost:63140/__cypress/runner/cypress_runner.js:159060:25\n    at visitFailedByErr (http://localhost:63140/__cypress/runner/cypress_runner.js:158436:12)\n    at http://localhost:63140/__cypress/runner/cypress_runner.js:159040:13\n    at tryCatcher (http://localhost:63140/__cypress/runner/cypress_runner.js:10765:23)\n    at Promise._settlePromiseFromHandler (http://localhost:63140/__cypress/runner/cypress_runner.js:8700:31)\n    at Promise._settlePromise (http://localhost:63140/__cypress/runner/cypress_runner.js:8757:18)\n    at Promise._settlePromise0 (http://localhost:63140/__cypress/runner/cypress_runner.js:8802:10)\n    at Promise._settlePromises (http://localhost:63140/__cypress/runner/cypress_runner.js:8878:18)\n    at _drainQueueStep (http://localhost:63140/__cypress/runner/cypress_runner.js:5472:12)\n    at _drainQueue (http://localhost:63140/__cypress/runner/cypress_runner.js:5465:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:63140/__cypress/runner/cypress_runner.js:5481:5)\n    at Async.drainQueues (http://localhost:63140/__cypress/runner/cypress_runner.js:5351:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:63140/__cypress/tests?p=cypress\\integration\\home_page_spec.js:101:8)",
+                "diff": null
+              },
+              "uuid": "fc679093-37de-49af-adb1-613e80756a9c",
+              "parentUUID": "e61b8c72-e168-4ddc-9a12-58e2dd69468f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "fc679093-37de-49af-adb1-613e80756a9c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 385,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e8c2ad31-86fa-4977-9969-961f5471d4d2",
+      "title": "",
+      "fullFile": "cypress\\integration\\my SecondTest.js",
+      "file": "cypress\\integration\\my SecondTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "22b856ae-c8eb-40b9-a911-87f9c5ffc0de",
+          "title": "Actions on elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "finds the element \"type\"",
+              "fullTitle": "Actions on elements finds the element \"type\"",
+              "timedOut": null,
+              "duration": 2509,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://example.cypress.io/');\ncy.contains('type').click(); // Should be on a new URL which includes \"/commands/actions\"\ncy.url().should('include', '/commands/actions'); // Get an input, type into it and verify that the value has been updated\ncy.get('#email1').type('test@email.com').should('have.value', 'test@email.com');",
+              "err": {},
+              "uuid": "6272662c-fe86-438c-898a-5b5b9e2cf229",
+              "parentUUID": "22b856ae-c8eb-40b9-a911-87f9c5ffc0de",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6272662c-fe86-438c-898a-5b5b9e2cf229"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2509,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0d5f93e0-9c41-461c-b901-d9b7e064f3be",
+      "title": "",
+      "fullFile": "cypress\\integration\\myFirstTest.js",
+      "file": "cypress\\integration\\myFirstTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e56dd1c1-f39d-4631-9c7c-db793f60f10e",
+          "title": "Site cypress.io",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "open in browser",
+              "fullTitle": "Site cypress.io open in browser",
+              "timedOut": null,
+              "duration": 7779,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.screenshot();",
+              "err": {},
+              "uuid": "eaaa34b9-d097-40e5-8c48-91d9785f59f4",
+              "parentUUID": "e56dd1c1-f39d-4631-9c7c-db793f60f10e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in iphone 8",
+              "fullTitle": "Site cypress.io open in iphone 8",
+              "timedOut": null,
+              "duration": 384,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-8');\ncy.screenshot();",
+              "err": {
+                "message": "NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.",
+                "estack": "NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Site cypress.io`\n\nhttps://on.cypress.io/uncaught-exception-from-application\nNetworkError: The following error originated from your application code, not from Cypress.\n\n  > Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\nError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.\n    at Function.vt.ajax (https://cdn.cookielaw.org/scripttemplates/5.13.0/otBannerSdk.js:7:63023)\n    at ee.createConsentTransaction (https://cdn.cookielaw.org/scripttemplates/5.13.0/otBannerSdk.js:7:90689)\n    at pe.consentDefaulCall (https://cdn.cookielaw.org/scripttemplates/5.13.0/otBannerSdk.js:7:115701)\n    at r (https://www.cypress.io/25-3932ff67534ed0705545.js:1:30471)",
+                "diff": null
+              },
+              "uuid": "74fb4056-c934-4b48-b046-d1b86fe61fad",
+              "parentUUID": "e56dd1c1-f39d-4631-9c7c-db793f60f10e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in samsung s10",
+              "fullTitle": "Site cypress.io open in samsung s10",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('samsung-s10');\ncy.screenshot();",
+              "err": {},
+              "uuid": "72b1a033-9ccb-4904-8b65-f8363d78d18f",
+              "parentUUID": "e56dd1c1-f39d-4631-9c7c-db793f60f10e",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "eaaa34b9-d097-40e5-8c48-91d9785f59f4"
+          ],
+          "failures": [
+            "74fb4056-c934-4b48-b046-d1b86fe61fad"
+          ],
+          "pending": [],
+          "skipped": [
+            "72b1a033-9ccb-4904-8b65-f8363d78d18f"
+          ],
+          "duration": 8163,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "692f2164-02a1-4685-93c0-90d8cd2d29f1",
+      "title": "",
+      "fullFile": "cypress\\integration\\orangeHRM\\orangeHRMComplete.js",
+      "file": "cypress\\integration\\orangeHRM\\orangeHRMComplete.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3634ad96-879a-4f39-8883-1406aa7dfec8",
+          "title": "OrangeHRMComplete",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "cbb12e86-8d27-48d0-8cc1-dbe847980c1e",
+              "title": "OrangeHRM",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+                  "fullTitle": "OrangeHRMComplete OrangeHRM Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+                  "timedOut": null,
+                  "duration": 1804,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('#frmLogin').contains('LOGIN Panel');",
+                  "err": {},
+                  "uuid": "6cb8a93b-9072-47f2-8651-f6ce6f5791e7",
+                  "parentUUID": "cbb12e86-8d27-48d0-8cc1-dbe847980c1e",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "6cb8a93b-9072-47f2-8651-f6ce6f5791e7"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1804,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "59f3f879-2ec0-42a1-868c-0cd4fde36725",
+      "title": "",
+      "fullFile": "cypress\\integration\\orangeHRM\\orangeHRMLogin.js",
+      "file": "cypress\\integration\\orangeHRM\\orangeHRMLogin.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1a7d8e91-6592-48ab-bfcb-b4cfcba98e46",
+          "title": "OrangeHRMLogin",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+              "fullTitle": "OrangeHRMLogin Le panneau LOGIN doit apparaître quand on ouvre l'URL",
+              "timedOut": null,
+              "duration": 1705,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/');\ncy.get('#frmLogin').contains('LOGIN');",
+              "err": {},
+              "uuid": "7e535c3c-01f7-4b19-89dd-84618487e37d",
+              "parentUUID": "1a7d8e91-6592-48ab-bfcb-b4cfcba98e46",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7e535c3c-01f7-4b19-89dd-84618487e37d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1705,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-21T11:42:50.735Z",
+    "end": "2021-03-21T11:43:07.160Z",
+    "duration": 16425,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "721c33ce-8f0c-432e-8caa-289901da1b4f",
+      "title": "",
+      "fullFile": "cypress\\integration\\automationTestGherkin.js",
+      "file": "cypress\\integration\\automationTestGherkin.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "691bef57-4c65-4727-9556-a5090098b48d",
+          "title": "site toolsQA Shop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "add shirts on cart",
+              "fullTitle": "site toolsQA Shop add shirts on cart",
+              "timedOut": null,
+              "duration": 13759,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Given J'accède à la page http://shop.demoqa.com/my-account/\ncy.visit('http://shop.demoqa.com/my-account/'); //And Je m'enregistre avec le nom d'utilisateur \"user02\",\n//l'adresse mail \"user02.test@gmail.com\"\n//et le mot de passe \"user02testPW\"\ncy.get('#reg_username').type('user02');\ncy.get('#reg_email').type('user02.test@gmail.com');\ncy.get('#reg_password').type('user02testPW');\ncy.get('.woocommerce-Button').click(); //When Je recherche \"shirt\"\ncy.get('.noo-search').click();\ncy.get('.form-control').type('shirt{enter}'); //And Je sélectionne les produits avec les spécifications suivantes\n//blue denim 34 black\ncy.get('.post-1430 > .noo-product-inner > h3 > a').click();\ncy.get('#pa_color').select('black');\ncy.get('#pa_size').select('34'); //And je clique sur \"Add to cart\"\ncy.get('.single_add_to_cart_button').click(); //And Je sélectionne un autre produit\n//playboy 40 grey\ncy.get('.noo-search').click();\ncy.get('.form-control').type('shirt{enter}');\ncy.get('.post-1491 > .noo-product-inner > h3 > a').click();\ncy.get('#pa_color').select('grey');\ncy.get('#pa_size').select('40'); //And je clique sur \"Add to cart\"\ncy.get('.single_add_to_cart_button').click(); //Then La page du panier contient \"blue denim\" et \"playboy\"\ncy.get('.woocommerce-message > .button').click();\ncy.get('.woocommerce > form').should('contain', 'blue denim');\ncy.get('.woocommerce > form').should('contain', 'playboy');",
+              "err": {},
+              "uuid": "6c14f6ec-1c8a-4801-8b12-13badb2a2c27",
+              "parentUUID": "691bef57-4c65-4727-9556-a5090098b48d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6c14f6ec-1c8a-4801-8b12-13badb2a2c27"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13759,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
