@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-22T15:22:44.111Z",
+    "end": "2021-03-22T15:22:49.531Z",
+    "duration": 5420,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "419db4a7-a5b0-45cf-8b6d-9bf3ee7c1355",
+      "title": "",
+      "fullFile": "cypress\\integration\\exercice_03.js",
+      "file": "cypress\\integration\\exercice_03.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "68a6af18-cead-40bf-872f-750aaf1b02ed",
+          "title": "Exercice 3",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "search for author name",
+              "fullTitle": "Exercice 3 search for author name",
+              "timedOut": null,
+              "duration": 2738,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#searchBox').type('Eric Elliot{enter}'); //Click on the book which title is 'Programming JavaScript Applications'\ncy.contains('Programming JavaScript Applications').click({\n  force: true\n}); //Verify that current URL contains ISBN number 9781491950296\n//cy.url().should('contains', '9781491950296')\ncy.url().should('include', '9781491950296');\ncy.url().should('eq', 'https://www.demoqa.com/books?book=9781491950296');",
+              "err": {},
+              "uuid": "5ec1d755-b4cc-4da7-b9ee-21a865c9c52e",
+              "parentUUID": "68a6af18-cead-40bf-872f-750aaf1b02ed",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5ec1d755-b4cc-4da7-b9ee-21a865c9c52e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2738,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

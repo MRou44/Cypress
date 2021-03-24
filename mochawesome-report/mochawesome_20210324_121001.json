@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-24T11:09:54.379Z",
+    "end": "2021-03-24T11:10:01.588Z",
+    "duration": 7209,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a45d8e0b-6a39-44ef-b5f9-3fb72ee26db7",
+      "title": "",
+      "fullFile": "cypress\\integration\\MyFirstTestBis.js",
+      "file": "cypress\\integration\\MyFirstTestBis.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "93f635cc-bf88-4a14-8c7d-7f44fa3805f2",
+          "title": "Site cypress.io",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "open in browser",
+              "fullTitle": "Site cypress.io open in browser",
+              "timedOut": null,
+              "duration": 2443,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.screenshot()",
+              "err": {},
+              "uuid": "38caab5d-fe98-4fe5-8357-78ea2502fef8",
+              "parentUUID": "93f635cc-bf88-4a14-8c7d-7f44fa3805f2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in iphone 8",
+              "fullTitle": "Site cypress.io open in iphone 8",
+              "timedOut": null,
+              "duration": 809,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-8'); //cy.screenshot()",
+              "err": {},
+              "uuid": "88a79998-4fdf-4b17-81f0-485f5a141266",
+              "parentUUID": "93f635cc-bf88-4a14-8c7d-7f44fa3805f2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in mobiles",
+              "fullTitle": "Site cypress.io open in mobiles",
+              "timedOut": null,
+              "duration": 2148,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-x'); //cy.screenshot()\ncy.viewport('macbook-16'); //cy.screenshot()\ncy.viewport('samsung-note9');",
+              "err": {},
+              "uuid": "bb1e36fa-0050-423d-a218-a5583b2b6b85",
+              "parentUUID": "93f635cc-bf88-4a14-8c7d-7f44fa3805f2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "38caab5d-fe98-4fe5-8357-78ea2502fef8",
+            "88a79998-4fdf-4b17-81f0-485f5a141266",
+            "bb1e36fa-0050-423d-a218-a5583b2b6b85"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5400,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

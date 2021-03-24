@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-22T15:24:05.479Z",
+    "end": "2021-03-22T15:24:10.324Z",
+    "duration": 4845,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1db94f12-dd31-4c38-91ff-96ee2830bec3",
+      "title": "",
+      "fullFile": "cypress\\integration\\my SecondTest.js",
+      "file": "cypress\\integration\\my SecondTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4dbae719-5d19-488b-8edd-b00c59bc71af",
+          "title": "Actions on elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "finds the element \"type\"",
+              "fullTitle": "Actions on elements finds the element \"type\"",
+              "timedOut": null,
+              "duration": 2481,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://example.cypress.io/');\ncy.contains('type').click(); // Should be on a new URL which includes \"/commands/actions\"\ncy.url().should('include', '/commands/actions'); // Get an input, type into it and verify that the value has been updated\ncy.get('#email1').type('test@email.com').should('have.value', 'test@email.com');",
+              "err": {},
+              "uuid": "be286074-b341-4b10-abb7-e665b2ca0479",
+              "parentUUID": "4dbae719-5d19-488b-8edd-b00c59bc71af",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "be286074-b341-4b10-abb7-e665b2ca0479"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2481,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

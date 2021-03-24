@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-24T11:10:08.961Z",
+    "end": "2021-03-24T11:10:16.350Z",
+    "duration": 7389,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0dd961a2-632b-4737-9dee-919a8dd09da5",
+      "title": "",
+      "fullFile": "cypress\\integration\\mySecondTestBis.js",
+      "file": "cypress\\integration\\mySecondTestBis.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "df9580e4-5617-47bc-9a35-af180bbca1aa",
+          "title": "Actions on elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "finds the element type",
+              "fullTitle": "Actions on elements finds the element type",
+              "timedOut": null,
+              "duration": 5864,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://example.cypress.io/');\ncy.pause();\ncy.contains('type').click(); // Should be on a new URL which includes \"/commands/actions\"\ncy.url().should('include', '/commands/actions'); //Get an input, type into it\ncy.get('#email1').type('tes@gmail.com').should('have.value', 'test@gmail.com');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<input#email1.form-control.action-email>' to have value 'test@gmail.com', but the value was 'tes@gmail.com'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<input#email1.form-control.action-email>' to have value 'test@gmail.com', but the value was 'tes@gmail.com'\n    at Context.eval (https://example.cypress.io/__cypress/tests?p=cypress\\integration\\mySecondTestBis.js:107:45)",
+                "diff": "- 'tes@gmail.com'\n+ 'test@gmail.com'\n"
+              },
+              "uuid": "7131d082-7b8f-4514-9ce2-59da4a2253b9",
+              "parentUUID": "df9580e4-5617-47bc-9a35-af180bbca1aa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7131d082-7b8f-4514-9ce2-59da4a2253b9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5864,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

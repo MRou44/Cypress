@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-24T11:05:38.282Z",
+    "end": "2021-03-24T11:06:02.481Z",
+    "duration": 24199,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "eb505df1-84b4-455d-875f-19780a301b35",
+      "title": "",
+      "fullFile": "cypress\\integration\\exercice_02.js",
+      "file": "cypress\\integration\\exercice_02.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "157f4842-5e83-471b-bd37-546230621150",
+          "title": "Exercice 2",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "open shop.demoqa.com in browser",
+              "fullTitle": "Exercice 2 open shop.demoqa.com in browser",
+              "timedOut": null,
+              "duration": 9911,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.screenshot();",
+              "err": {},
+              "uuid": "e2cddd3c-3494-41f2-b547-f8b17e1a0241",
+              "parentUUID": "157f4842-5e83-471b-bd37-546230621150",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open shop.demoqa.com in iphone 8",
+              "fullTitle": "Exercice 2 open shop.demoqa.com in iphone 8",
+              "timedOut": null,
+              "duration": 10517,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-8');\ncy.screenshot();\ncy.log('open in iphone 8 is ok');",
+              "err": {},
+              "uuid": "7f81d175-2f6c-48cc-9628-0452ee98c439",
+              "parentUUID": "157f4842-5e83-471b-bd37-546230621150",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open shop.demoqa.com in samsung s10",
+              "fullTitle": "Exercice 2 open shop.demoqa.com in samsung s10",
+              "timedOut": null,
+              "duration": 2324,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('');\ncy.screenshot();",
+              "err": {
+                "message": "CypressError: `cy.viewport()` cannot be passed an empty string.\n\nhttps://on.cypress.io/viewport",
+                "estack": "CypressError: `cy.viewport()` cannot be passed an empty string.\n\nhttps://on.cypress.io/viewport\n    at Context.viewport (http://shop.demoqa.com/__cypress/runner/cypress_runner.js:161742:19)\nFrom Your Spec Code:\n    at Context.eval (http://shop.demoqa.com/__cypress/tests?p=cypress\\integration\\exercice_02.js:112:8)",
+                "diff": null
+              },
+              "uuid": "d2e91e94-af3d-4d1a-b278-7d5c6b1247f1",
+              "parentUUID": "157f4842-5e83-471b-bd37-546230621150",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e2cddd3c-3494-41f2-b547-f8b17e1a0241",
+            "7f81d175-2f6c-48cc-9628-0452ee98c439"
+          ],
+          "failures": [
+            "d2e91e94-af3d-4d1a-b278-7d5c6b1247f1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 22752,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

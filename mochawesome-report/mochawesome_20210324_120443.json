@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-24T11:04:39.584Z",
+    "end": "2021-03-24T11:04:43.287Z",
+    "duration": 3703,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f958c4a0-886c-4e21-a800-ca1195ff1383",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo_file_upload.js",
+      "file": "cypress\\integration\\demo_file_upload.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2f0ba3ce-95f4-4139-833d-e266230e4377",
+          "title": "Example to demonstrate file upload in cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Upload a photography and verify if uploaded",
+              "fullTitle": "Example to demonstrate file upload in cypress Upload a photography and verify if uploaded",
+              "timedOut": null,
+              "duration": 2131,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var filepath = 'images/myPhotography.jpg';\ncy.get('#uploadFile').attachFile(filepath);\ncy.get('#uploadedFilePath').contains('myPhotography.jpg');",
+              "err": {},
+              "uuid": "6a0bb3b3-05c1-4136-b9da-ef6c4399739b",
+              "parentUUID": "2f0ba3ce-95f4-4139-833d-e266230e4377",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6a0bb3b3-05c1-4136-b9da-ef6c4399739b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2131,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

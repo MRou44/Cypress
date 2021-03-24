@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-24T14:28:53.441Z",
+    "end": "2021-03-24T14:29:10.052Z",
+    "duration": 16611,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c91f7158-61c1-491c-ad7e-31f101658294",
+      "title": "",
+      "fullFile": "cypress\\integration\\myFirstTest01.js",
+      "file": "cypress\\integration\\myFirstTest01.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bbc7c186-3ddf-4c12-a365-0d27092b6842",
+          "title": "Site cypress.io",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "open in browser",
+              "fullTitle": "Site cypress.io open in browser",
+              "timedOut": null,
+              "duration": 7073,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.cypress.io/');\ncy.screenshot();",
+              "err": {},
+              "uuid": "7d92d5c9-44f0-4434-a104-e88322ce4fdc",
+              "parentUUID": "bbc7c186-3ddf-4c12-a365-0d27092b6842",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in iphone 8",
+              "fullTitle": "Site cypress.io open in iphone 8",
+              "timedOut": null,
+              "duration": 389,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.cypress.io/');\ncy.viewport('iphone-8');\ncy.screenshot();",
+              "err": {
+                "message": "NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.",
+                "estack": "NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.\n\nhttps://on.cypress.io/uncaught-exception-from-application\nNetworkError: The following error originated from your application code, not from Cypress.\n\n  > Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\nError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'https://privacyportal-eu.onetrust.com/request/v1/consentreceipts': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.\n    at Function.vt.ajax (https://cdn.cookielaw.org/scripttemplates/5.13.0/otBannerSdk.js:7:63023)\n    at ee.createConsentTransaction (https://cdn.cookielaw.org/scripttemplates/5.13.0/otBannerSdk.js:7:90689)\n    at pe.consentDefaulCall (https://cdn.cookielaw.org/scripttemplates/5.13.0/otBannerSdk.js:7:115701)\n    at r (https://www.cypress.io/25-3932ff67534ed0705545.js:1:30471)",
+                "diff": null
+              },
+              "uuid": "e02748f2-e775-41f2-9534-7d2377c64063",
+              "parentUUID": "bbc7c186-3ddf-4c12-a365-0d27092b6842",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in samsung s10",
+              "fullTitle": "Site cypress.io open in samsung s10",
+              "timedOut": null,
+              "duration": 7213,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.cypress.io/');\ncy.viewport('samsung-s10');\ncy.screenshot();",
+              "err": {},
+              "uuid": "15e8192c-afd2-4f07-8304-cae25c594f00",
+              "parentUUID": "bbc7c186-3ddf-4c12-a365-0d27092b6842",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7d92d5c9-44f0-4434-a104-e88322ce4fdc",
+            "15e8192c-afd2-4f07-8304-cae25c594f00"
+          ],
+          "failures": [
+            "e02748f2-e775-41f2-9534-7d2377c64063"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14675,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

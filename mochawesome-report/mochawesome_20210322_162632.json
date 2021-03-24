@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-22T15:26:20.943Z",
+    "end": "2021-03-22T15:26:32.071Z",
+    "duration": 11128,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "12c96e6a-01f3-46a7-b277-4c751cc63e8c",
+      "title": "",
+      "fullFile": "cypress\\integration\\orangeHRM\\delEmployee.js",
+      "file": "cypress\\integration\\orangeHRM\\delEmployee.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "250de43e-c532-4155-952f-020d718bbedf",
+          "title": "OrangeHRM",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Delete an employee",
+              "fullTitle": "OrangeHRM Delete an employee",
+              "timedOut": null,
+              "duration": 8721,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/'); //Login as Admin\ncy.get('#txtUsername').type('Admin');\ncy.get('#txtPassword').type('admin123');\ncy.get('#btnLogin').click(); //Search for employee from id\ncy.get('#menu_pim_viewPimModule').click();\ncy.get('#menu_pim_viewEmployeeList').click({\n  force: true\n});\ncy.get('#empsearch_id').type(this.employee.id);\ncy.get('#searchBtn').click(); //Delete employee\ncy.get('input[type=\"checkbox\"]').check();\ncy.get('#btnDelete').click({\n  force: true\n});\ncy.get('#dialogDeleteBtn').click({\n  force: true\n}); //Verify text \"No Records Found\"\ncy.contains('No Records Found');",
+              "err": {},
+              "uuid": "ffed4810-bc02-4908-b21a-90a3dcc05f38",
+              "parentUUID": "250de43e-c532-4155-952f-020d718bbedf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ffed4810-bc02-4908-b21a-90a3dcc05f38"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8721,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
