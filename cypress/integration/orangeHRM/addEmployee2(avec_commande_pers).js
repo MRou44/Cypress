@@ -6,13 +6,7 @@ describe('OrangeHRM', function() {
     })
 
     it('Add an employee', function() {
-        //cy.visit('https://opensource-demo.orangehrmlive.com/')
-
-        //Login as Admin
-        //cy.get('#txtUsername').type('Admin')
-        //cy.get('#txtPassword').type('admin123')
-        //cy.get('#btnLogin').click()
-
+       
         //Add employee information
         cy.get('#menu_pim_viewPimModule').click()
         cy.get('#menu_pim_addEmployee').click({force: true})

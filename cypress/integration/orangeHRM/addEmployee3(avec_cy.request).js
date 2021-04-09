@@ -8,9 +8,6 @@ describe('OrangeHRM', function() {
     it('Add an employee', function() {
        
         //Add employee information
-        //cy.get('#menu_pim_viewPimModule').click()
-        //cy.get('#menu_pim_addEmployee').click({force: true})
-
         cy.request('/index.php/pim/addEmployee')
         cy.get('#firstName').type(this.employee.firstName)
         cy.get('#middleName').type(this.employee.middleName)
