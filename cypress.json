@@ -1,5 +1,6 @@
 {
   "projectId": "hp4d7d",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/",
   "reporter": "C:/Users/marti/TutoCypress/node_modules/mochawesome/src/mochawesome.js",
   "reporterOptions": {
   	"overwrite": false,

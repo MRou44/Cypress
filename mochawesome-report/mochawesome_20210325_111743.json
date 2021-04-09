@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-25T10:17:40.854Z",
+    "end": "2021-03-25T10:17:43.711Z",
+    "duration": 2857,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6c577c14-8cea-46ba-8aa0-a3ab268cd4af",
+      "title": "",
+      "fullFile": "cypress\\integration\\form.js",
+      "file": "cypress\\integration\\form.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "28756bbd-c70f-4abf-9cc2-b34aa5b28e46",
+          "title": "Submit a form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "fills out and submit a form and verify data",
+              "fullTitle": "Submit a form fills out and submit a form and verify data",
+              "timedOut": null,
+              "duration": 1773,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demoqa.com/automation-practice-form');\ncy.get('#dateOfBirthInput').click();\ncy.get('.react-datepicker__month-select').select('June');\ncy.get('.react-datepicker__year-select').select('1973');",
+              "err": {},
+              "uuid": "f7895203-c746-4c8c-8c07-dd1e142079a4",
+              "parentUUID": "28756bbd-c70f-4abf-9cc2-b34aa5b28e46",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f7895203-c746-4c8c-8c07-dd1e142079a4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1773,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

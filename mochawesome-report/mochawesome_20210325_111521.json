@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-25T10:15:13.425Z",
+    "end": "2021-03-25T10:15:21.430Z",
+    "duration": 8005,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "481ba0a6-bacf-4308-ac20-7f5428b37d92",
+      "title": "",
+      "fullFile": "cypress\\integration\\demo_fixtures2.js",
+      "file": "cypress\\integration\\demo_fixtures2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5aec7e34-1189-446b-84f6-ee1e579419cc",
+          "title": "Demo automation with fixtures",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Register",
+              "fullTitle": "Demo automation with fixtures Register",
+              "timedOut": null,
+              "duration": 4656,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://shop.demoqa.com/my-account');\ncy.get('#reg_username').type(this.user.username);\ncy.get('#reg_email').type(this.user.email);\ncy.get('#reg_password').type(this.user.password);\ncy.get('.woocommerce-Button').click();",
+              "err": {},
+              "uuid": "e0dfc1eb-9dfe-462a-ba8f-9213fe9cdcd2",
+              "parentUUID": "5aec7e34-1189-446b-84f6-ee1e579419cc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Log in",
+              "fullTitle": "Demo automation with fixtures Log in",
+              "timedOut": null,
+              "duration": 1575,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#username').clear().type(this.user.username);\ncy.get('#password').type(this.user.password);\ncy.get(':nth-child(3) > .woocommerce-button').click();\ncy.get('.woocommerce-MyAccount-content > :nth-child(2)').contains(this.user.username);",
+              "err": {},
+              "uuid": "f1d9cbd4-7899-47a0-b4a8-5925ae0e8bf5",
+              "parentUUID": "5aec7e34-1189-446b-84f6-ee1e579419cc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e0dfc1eb-9dfe-462a-ba8f-9213fe9cdcd2",
+            "f1d9cbd4-7899-47a0-b4a8-5925ae0e8bf5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6231,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

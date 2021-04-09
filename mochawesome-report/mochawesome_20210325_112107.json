@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-25T10:20:58.137Z",
+    "end": "2021-03-25T10:21:07.503Z",
+    "duration": 9366,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "72e80cd3-e8fd-4aff-acfb-897f2a3ede18",
+      "title": "",
+      "fullFile": "cypress\\integration\\orangeHRM\\addEmployee3.js",
+      "file": "cypress\\integration\\orangeHRM\\addEmployee3.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "173e1815-6f13-4129-87f0-c672be0b3085",
+          "title": "OrangeHRM",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add an employee",
+              "fullTitle": "OrangeHRM Add an employee",
+              "timedOut": null,
+              "duration": 9215,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Add employee information\n//cy.get('#menu_pim_viewPimModule').click()\n//cy.get('#menu_pim_addEmployee').click({force: true})\ncy.request('/index.php/pim/addEmployee');\ncy.get('#firstName').type(this.employee.firstName);\ncy.get('#middleName').type(this.employee.middleName);\ncy.get('#lastName').type(this.employee.lastName);\ncy.get('#employeeId').clear().type(this.employee.id);\ncy.get('#photofile').attachFile('images/myPhotography.jpg'); //Add employee details\ncy.get('#chkLogin').check();\ncy.get('#user_name').type(this.employee.userName);\ncy.get('#user_password').type(this.employee.password);\ncy.get('#re_password').type(this.employee.confirmPassword); //Verify status is \"Enabled\"\ncy.get('#status').contains('Enabled'); //Save\ncy.get('#btnSave').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#firstName`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#firstName`, but never found it.\n    at Context.eval (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress\\integration\\orangeHRM\\addEmployee3.js:109:8)",
+                "diff": null
+              },
+              "uuid": "67f70f2d-a04e-4de1-9a42-4d9ea4851ceb",
+              "parentUUID": "173e1815-6f13-4129-87f0-c672be0b3085",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "67f70f2d-a04e-4de1-9a42-4d9ea4851ceb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9215,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -38,6 +38,7 @@ describe('OrangeHRM', function() {
     after(function() {
         cy.get('#welcome').click()
         cy.contains('Logout').click()
+        //cy.get("#welcome-menu a[href='/index.php/aut/logout']").click({force: true})
     })
 
 })
